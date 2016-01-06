@@ -26,10 +26,10 @@ small_epc$Date_Time <- strptime(small_epc$Date_Time, format = "%Y-%m-%d %H:%M:%S
 
 
 ##The first plot:
-
+png("plot1.png",  width = 480, height = 480, units = "px")
 hist(small_epc$Global_active_power, col = "red", 
      xlab = "Global Active Power (Kilowatts)",
      main = "Global Active Power")
 
-dev.copy(png, "plot1.png")
+
 dev.off()

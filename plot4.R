@@ -23,7 +23,7 @@ small_epc <- subset(epc, (Date == "2007-02-01" | Date == "2007-02-02" ))
 
 small_epc$Date_Time <- paste(small_epc$Date, small_epc$Time)
 small_epc$Date_Time <- strptime(small_epc$Date_Time, format = "%Y-%m-%d %H:%M:%S")
-
+Sys.setlocale("LC_TIME", "English")
 par(mfrow = c(2,2))
 with(small_epc, plot(Date_Time, Global_active_power, type = "l", ylab = "Global Active Power (Kilowatts)"))
 with(small_epc, plot(Date_Time, Voltage, type = "l", ylab = "Voltage", xlab = "datetime"))

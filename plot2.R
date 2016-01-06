@@ -27,7 +27,13 @@ small_epc$Date_Time <- strptime(small_epc$Date_Time, format = "%Y-%m-%d %H:%M:%S
 
 ##The Second:
 Sys.setlocale("LC_TIME", "English")
+
+png("plot2.png",  width = 480, height = 480, units = "px")
 with(small_epc, plot(Date_Time, Global_active_power, type = "l", ylab = "Global Active Power (Kilowatts)"))
 
-dev.copy(png, "plot2.png")
+
 dev.off()
+
+
+
+
